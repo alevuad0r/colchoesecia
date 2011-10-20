@@ -11,6 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20111020000756) do
+
+  create_table "clientes", :force => true do |t|
+    t.string   "nome",       :limit => 80
+    t.string   "cpf",        :limit => 11
+    t.string   "identidade", :limit => 12
+    t.string   "email",      :limit => 120
+    t.string   "telefone",   :limit => 14
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
