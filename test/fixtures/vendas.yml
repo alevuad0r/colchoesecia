@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cliente_id: 1
+  produtos: MyString
+  usuario_id: 1
+  valor_da_venda: 1.5
+
+two:
+  cliente_id: 1
+  produtos: MyString
+  usuario_id: 1
+  valor_da_venda: 1.5
