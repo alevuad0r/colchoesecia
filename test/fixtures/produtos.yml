@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cod_produto: MyString
+  nome: MyString
+  tamanho: MyString
+  preco: 1.5
+  descricao: MyText
+
+two:
+  cod_produto: MyString
+  nome: MyString
+  tamanho: MyString
+  preco: 1.5
+  descricao: MyText
