@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  email: MyString
+  telefone: MyString
+  usuario_id: 1
+  data: 2011-10-29
+  valor_total: 1.5
+  produto_id: 1
+  cliente_id: 1
+
+two:
+  nome: MyString
+  email: MyString
+  telefone: MyString
+  usuario_id: 1
+  data: 2011-10-29
+  valor_total: 1.5
+  produto_id: 1
+  cliente_id: 1

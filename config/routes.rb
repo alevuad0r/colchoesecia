@@ -1,4 +1,6 @@
 Ortobom::Application.routes.draw do
+  resources :orcamentos
+
   resources :usuarios
 
   resources :clientes

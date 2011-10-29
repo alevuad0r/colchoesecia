@@ -1,0 +1,49 @@
+<%= form_for(@orcamento) do |f| %>
+  <% if @orcamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orcamento.errors.count, "error") %> prohibited this orcamento from being saved:</h2>
+
+      <ul>
+      <% @orcamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br />
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :valor_total %><br />
+    <%= f.text_field :valor_total %>
+  </div>
+  <div class="field">
+    <%= f.label :produto_id %><br />
+    <%= f.number_field :produto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente_id %><br />
+    <%= f.number_field :cliente_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
