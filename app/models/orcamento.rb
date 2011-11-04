@@ -1,6 +1,6 @@
 class Orcamento < ActiveRecord::Base
 
-   belongs_to :produto
+   has_and_belongs_to_many :produtos
    belongs_to :usuario
    
 end
