@@ -27,11 +27,9 @@ ActiveRecord::Schema.define(:version => 20111104234603) do
     t.string   "nome"
     t.string   "email"
     t.string   "telefone"
-    t.integer  "usuario_id"
     t.date     "data"
     t.float    "valor_total"
-    t.integer  "produto_id"
-    t.integer  "cliente_id"
+    t.integer  "usuario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
