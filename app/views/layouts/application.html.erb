@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
     <title>Sistema SALC</title>
     <style type="text/css" media="screen">
       body {
@@ -128,6 +131,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <div>
+      <% if usuario_signed_in? %>
+        <%= link_to "Logout", destroy_usuario_session_path, :method => :delete %>
+      <% end %>
+    </div>
     <h1 align='center'>Sistema SALC</h1>
     <div id="getting-started">
       <a href="http://0.0.0.0:3000/clientes">Clientes</a>
