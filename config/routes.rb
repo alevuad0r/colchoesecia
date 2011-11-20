@@ -9,7 +9,7 @@ Ortobom::Application.routes.draw do
 
   resources :clientes
 
-  devise_for :usuarios, :path_prefix => 'devise' #, :controllers => {:registrations => "registrations"}
+  devise_for :usuarios, :path_prefix => 'devise', :controllers => {:registrations => "registrations"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
