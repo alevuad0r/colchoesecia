@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105000219) do
+ActiveRecord::Schema.define(:version => 20111119142618) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome",       :limit => 80
@@ -49,20 +49,35 @@ ActiveRecord::Schema.define(:version => 20111105000219) do
     t.datetime "updated_at"
   end
 
+  create_table "usuario_sessions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usuarios", :force => true do |t|
-    t.string   "nome"
-    t.string   "login"
-    t.string   "senha"
+    t.string   "nome",                              :null => false
+    t.string   "senha",                             :null => false
     t.string   "telefone"
-    t.string   "email"
+    t.string   "email",                             :null => false
+    t.string   "login",                             :null => false
+    t.string   "persistence_token",                 :null => false
+    t.string   "crypted_password",                  :null => false
+    t.string   "password_salt",                     :null => false
+    t.integer  "login_count",        :default => 0, :null => false
+    t.integer  "failed_login_count", :default => 0, :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "vendas", :force => true do |t|
     t.integer  "cliente_id"
-    t.string   "produtos"
     t.integer  "usuario_id"
+    t.string   "produtos"
     t.float    "valor_da_venda"
     t.datetime "created_at"
     t.datetime "updated_at"

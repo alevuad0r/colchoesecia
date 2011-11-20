@@ -1,4 +1,6 @@
 Ortobom::Application.routes.draw do
+  devise_for :usuarios
+
   resources :produtos
 
   resources :vendas
