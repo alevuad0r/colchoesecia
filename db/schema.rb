@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111119142618) do
+ActiveRecord::Schema.define(:version => 20111120000453) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome",       :limit => 80
@@ -49,30 +49,27 @@ ActiveRecord::Schema.define(:version => 20111119142618) do
     t.datetime "updated_at"
   end
 
-  create_table "usuario_sessions", :force => true do |t|
+  create_table "usuarios", :force => true do |t|
+    t.string   "nome"
+    t.string   "login"
+    t.string   "senha"
+    t.string   "telefone"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                         :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
-  create_table "usuarios", :force => true do |t|
-    t.string   "nome",                              :null => false
-    t.string   "senha",                             :null => false
-    t.string   "telefone"
-    t.string   "email",                             :null => false
-    t.string   "login",                             :null => false
-    t.string   "persistence_token",                 :null => false
-    t.string   "crypted_password",                  :null => false
-    t.string   "password_salt",                     :null => false
-    t.integer  "login_count",        :default => 0, :null => false
-    t.integer  "failed_login_count", :default => 0, :null => false
-    t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
+  add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
 
   create_table "vendas", :force => true do |t|
     t.integer  "cliente_id"

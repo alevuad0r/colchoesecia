@@ -1,7 +1,7 @@
 class AddDeviseToUsuarios < ActiveRecord::Migration
   def self.up
     change_table(:usuarios) do |t|
-      t.database_authenticatable :null => false
+      t.string :encrypted_password, :null => false, :default => '', :limit => 128
       t.recoverable
       t.rememberable
       t.trackable

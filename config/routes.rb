@@ -1,6 +1,4 @@
 Ortobom::Application.routes.draw do
-  devise_for :usuarios
-
   resources :produtos
 
   resources :vendas
@@ -10,6 +8,8 @@ Ortobom::Application.routes.draw do
   resources :usuarios
 
   resources :clientes
+
+  devise_for :usuarios, :path_prefix => 'devise' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
