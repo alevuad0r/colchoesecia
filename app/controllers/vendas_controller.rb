@@ -1,4 +1,7 @@
 class VendasController < ApplicationController
+
+  before_filter :authenticate_usuario!
+
   # GET /vendas
   # GET /vendas.json
   def index

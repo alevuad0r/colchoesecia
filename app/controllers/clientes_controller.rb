@@ -1,6 +1,6 @@
 class ClientesController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_usuario!
 
   # GET /clientes
   # GET /clientes.json
