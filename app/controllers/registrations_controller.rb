@@ -1,3 +1,2 @@
-class RegistrationsController < ApplicationController
-  before_filter :authenticate_usuario!
+class RegistrationsController < Devise::RegistrationsController
 end
