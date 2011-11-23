@@ -73,7 +73,11 @@ ActiveRecord::Schema.define(:version => 20111120000453) do
   create_table "vendas", :force => true do |t|
     t.integer  "cliente_id"
     t.integer  "usuario_id"
+<<<<<<< HEAD
     t.string   "produtos"
+=======
+    t.integer  "produto_id"
+>>>>>>> Arrumando vendas
     t.float    "valor_da_venda"
     t.datetime "created_at"
     t.datetime "updated_at"

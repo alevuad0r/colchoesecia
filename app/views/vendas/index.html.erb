@@ -13,9 +13,9 @@
 
 <% @vendas.each do |venda| %>
   <tr>
-    <td><%= venda.cliente_id %></td>
-    <td><%= venda.produtos %></td>
-    <td><%= venda.usuario_id %></td>
+    <td><%= venda.cliente.nome %></td>
+    <td><%= venda.produto_id %></td>
+    <td><%= venda.usuario.nome %></td>
     <td><%= venda.valor_da_venda %></td>
     <td><%= link_to 'Show', venda %></td>
     <td><%= link_to 'Edit', edit_venda_path(venda) %></td>

@@ -28,7 +28,7 @@ class VendasController < ApplicationController
   # GET /vendas/new.json
   def new
     @venda = Venda.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @venda }

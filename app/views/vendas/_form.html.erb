@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :cliente_id %><br />
-    <%= f.number_field :cliente_id %>
+    <%= f.collection_select(:cliente_id,Cliente.order("nome"), :id, :nome, {:prompt=>true}) %>
   </div>
   <div class="field">
-    <%= f.label :produtos %><br />
-    <%= f.text_field :produtos %>
+    <%= f.label :produto_id %><br />
+    <%= f.collection_select(:produto_id,Produto.order("nome"), :id, :nome, {:prompt=>true})  %>
   </div>
   <div class="field">
     <%= f.label :usuario_id %><br />
-    <%= f.number_field :usuario_id %>
+    <%= f.collection_select(:usuario_id,Usuario.order("nome"), :id, :nome, {:prompt=>true}) %>
   </div>
   <div class="field">
     <%= f.label :valor_da_venda %><br />
