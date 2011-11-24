@@ -6,7 +6,6 @@
     <th>Email</th>
     <th>Telefone</th>
     <th>Usuario</th>
-    <th>Data</th>
     <th>Valor total</th>
     <th>Produtos</th>
     <th></th>
@@ -20,9 +19,8 @@
     <td><%= orcamento.email %></td>
     <td><%= orcamento.telefone %></td>
     <td><%= orcamento.usuario_id %></td>
-    <td><%= orcamento.data %></td>
     <td><%= orcamento.valor_total %></td>
-    <td><%= orcamento.produto_ids %></td>
+    <td><%= orcamento.produtos.join(", ") %></td>
     <td><%= link_to 'Show', orcamento %></td>
     <td><%= link_to 'Edit', edit_orcamento_path(orcamento) %></td>
     <td><%= link_to 'Destroy', orcamento, confirm: 'Are you sure?', method: :delete %></td>

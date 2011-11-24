@@ -27,8 +27,13 @@
     <%= f.label :valor_total %><br />
     <%= f.text_field :valor_total %>
   </div>
+  <% i = 1; %>
   <% for produto in Produto.find(:all) %>
-    <%= check_box_tag "orcamento[produto_ids][]", produto.id, @orcamento.produtos.include?(produto.id)  %> <%= produto.nome %>
+    <%= check_box_tag "orcamento[produto_ids][]", produto.id, @orcamento.produtos.include?(produto)  %> <%= produto.nome %>
+    <% if (i % 5) == 0 %>
+      <br /> 
+    <% end %>
+    <% i = i + 1 %>
   <% end %>
   <div class="actions">
     <%= f.submit %>
