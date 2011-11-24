@@ -27,11 +27,8 @@ ActiveRecord::Schema.define(:version => 20111120000453) do
     t.string   "nome"
     t.string   "email"
     t.string   "telefone"
-    t.integer  "usuario_id"
-    t.date     "data"
     t.float    "valor_total"
-    t.integer  "produto_id"
-    t.integer  "cliente_id"
+    t.integer  "usuario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20111120000453) do
 
   create_table "vendas", :force => true do |t|
     t.integer  "cliente_id"
-    t.string   "produtos"
     t.integer  "usuario_id"
+    t.string   "produtos"
     t.float    "valor_da_venda"
     t.datetime "created_at"
     t.datetime "updated_at"

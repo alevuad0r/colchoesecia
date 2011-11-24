@@ -24,25 +24,12 @@
     <%= f.text_field :telefone %>
   </div>
   <div class="field">
-    <%= f.label :usuario_id %><br />
-    <%= f.number_field :usuario_id %>
-  </div>
-  <div class="field">
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
-  </div>
-  <div class="field">
     <%= f.label :valor_total %><br />
     <%= f.text_field :valor_total %>
   </div>
-  <div class="field">
-    <%= f.label :produto_id %><br />
-    <%= f.number_field :produto_id %>
-  </div>
-  <div class="field">
-    <%= f.label :cliente_id %><br />
-    <%= f.number_field :cliente_id %>
-  </div>
+  <% for produto in Produto.find(:all) %>
+    <%= check_box_tag "orcamento[produto_ids][]", produto.id, @orcamento.produtos.include?(produto.id)  %> <%= produto.nome %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

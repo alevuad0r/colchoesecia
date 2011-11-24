@@ -44,6 +44,7 @@ class OrcamentosController < ApplicationController
   # POST /orcamentos.json
   def create
     @orcamento = Orcamento.new(params[:orcamento])
+    @orcamento.usuario = current_usuario
 
     respond_to do |format|
       if @orcamento.save

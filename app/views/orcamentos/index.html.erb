@@ -8,8 +8,7 @@
     <th>Usuario</th>
     <th>Data</th>
     <th>Valor total</th>
-    <th>Produto</th>
-    <th>Cliente</th>
+    <th>Produtos</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,8 +22,7 @@
     <td><%= orcamento.usuario_id %></td>
     <td><%= orcamento.data %></td>
     <td><%= orcamento.valor_total %></td>
-    <td><%= orcamento.produto_id %></td>
-    <td><%= orcamento.cliente_id %></td>
+    <td><%= orcamento.produto_ids %></td>
     <td><%= link_to 'Show', orcamento %></td>
     <td><%= link_to 'Edit', edit_orcamento_path(orcamento) %></td>
     <td><%= link_to 'Destroy', orcamento, confirm: 'Are you sure?', method: :delete %></td>

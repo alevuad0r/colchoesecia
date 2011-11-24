@@ -4,7 +4,6 @@ class CreateOrcamentos < ActiveRecord::Migration
       t.string :nome
       t.string :email
       t.string :telefone
-      t.date :data
       t.float :valor_total
       t.integer :usuario_id
 

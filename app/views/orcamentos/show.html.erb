@@ -17,12 +17,12 @@
 
 <p>
   <b>Usuario:</b>
-  <%= @orcamento.usuario_id %>
+  <%= @orcamento.usuario.nome %>
 </p>
 
 <p>
   <b>Data:</b>
-  <%= @orcamento.data %>
+  <%= @orcamento.created_at.year %>
 </p>
 
 <p>
@@ -31,15 +31,9 @@
 </p>
 
 <p>
-  <b>Produto:</b>
-  <%= @orcamento.produto_id %>
+  <b>Produtos:</b>
+  <%= @orcamento.produto_ids %>
 </p>
-
-<p>
-  <b>Cliente:</b>
-  <%= @orcamento.cliente_id %>
-</p>
-
 
 <%= link_to 'Edit', edit_orcamento_path(@orcamento) %> |
 <%= link_to 'Back', orcamentos_path %>
