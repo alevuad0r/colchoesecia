@@ -133,7 +133,9 @@
   <body>
     <div>
       <% if usuario_signed_in? %>
-        <%= link_to "Logout", destroy_usuario_session_path, :method => :delete %>
+        (<%= current_usuario.nome %>)<%= link_to "Logout", destroy_usuario_session_path, :method => :delete %>
+	  <% else %>
+		<%= link_to "Login", new_usuario_session_path %>
       <% end %>
     </div>
     <h1 align='center'>Sistema SALC</h1>
